@@ -1,0 +1,42 @@
+Instructions for running inference with NanoChat RL model
+=========================================================
+
+1. Open a terminal and move into the project directory:
+   cd /Users/royanne-marie/Documents_local/cursor_apps/nanochat_rl
+
+2. Activate the virtual environment:
+   source .venv/bin/activate
+
+3. Run the helper script with your prompt (streaming output):
+   python hf_test.py --prompt "Hello there"
+
+   - To skip streaming and only print the final text:
+     python hf_test.py --prompt "Hello there" --no-stream
+
+   - To enter interactive mode (type prompts repeatedly):
+     python hf_test.py
+
+4. Optional arguments:
+   --max-tokens <int>        Maximum generated tokens (default 256)
+   --temperature <float>     Sampling temperature (default 0.8)
+   --top-k <int>             Top-k sampling value (default 50)
+   --model <repo_id>         Alternate Hugging Face repo (default jasonacox/nanochat-1.8B-rl)
+   --cache-dir <path>        Custom cache directory
+   --nanochat-path <path>    Custom NanoChat checkout path
+
+5. Deactivate the environment when done:
+   deactivate
+
+Sample prompts to try:
+----------------------
+1. "Give me three creative icebreaker questions for a virtual meetup."
+2. "Summarize the main benefits of daily meditation in two sentences."
+3. "Write a short motivational message for someone starting a new job."
+4. "Explain quantum computing like I'm a curious middle-school student."
+5. "Suggest a weekend itinerary for visiting Kyoto, Japan."
+6. "Create a polite email requesting feedback on a recent presentation."
+7. "Generate a fun fact about space and ask me a follow-up question."
+8. "Outline a simple meal plan for someone following a vegetarian diet."
+9. "Draft a product description for a smart wearable fitness tracker."
+10. "List five engaging blog post ideas about remote work productivity."
+
